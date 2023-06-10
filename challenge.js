@@ -30,7 +30,7 @@ BONUS TEST DATA 1: [5, 2, 3]
 BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 
 GOOD LUCK 😀
-*/
+
 
 const poll = {
   question: 'What is your favourite programming language?',
@@ -66,3 +66,12 @@ const arr2 = [1, 5, 3, 9, 6, 1];
 
 poll.displayResults.call({ answers: arr }, 'string');
 poll.displayResults.call({ answers: arr2 }, 'string');
+*/
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
