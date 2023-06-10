@@ -97,7 +97,7 @@ greet('Hello')('Russell');
 
 const greeter = greeting => name => console.log(`${greeting} ${name}`);
 greeter('hiya')('Russell');
-*/
+
 
 const lufthansa = {
   airline: 'Lufthansa',
@@ -190,3 +190,37 @@ const taxRate = function (rate) {
 
 const taxTotal = taxRate(0.23);
 taxTotal(100);
+
+
+(function () {
+  console.log('This will never run again');
+  const isPrivate = 23;
+})();
+
+// console.log(isPrivate);
+
+(() => console.log('This will ALSO never run again'))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+
+// console.log(isPrivate);
+console.log(notPrivate);
+*/
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
